@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="What's the Price of Wheat?">
+    <meta name="author" content="Team Big Pandas">
+
+    <title>Daniel Wang</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fancyBox.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Team Big Pandas</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#EDA">EDA</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#features">Features Engineering</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#model">Predictive Model</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#results">Results/Discussion</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">What's the Price of Wheat</span>
+                        <span class="skills">Constructing a Predictive Model for U.S. Wheat Prices</span>
+                        <br><br><br>
+                        <p>Daniel Wang, Vinh Nguyen, Andy Tran, Fanney Zhu</p>
+                        <div class="page-scroll">
+                            <a href="#portfolio" class="btn btn-circle">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction-->
+
+    <section id="introduction" class="success" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><font color="#F8F8F8">Project Background and Motivation</h2>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h4><font color="#F8F8F8">Introduction</h4>
+                    <br>
+                    <p><font color="#F8F8F8">We chose to create a predictor of the stock price of wheat because of the ever-pervasive fluctuation in food prices. Wheat is among one of the most fundamental agricultural commodities in the United States, so understanding and ultimately predicting the price of this commodity will allow us to understand an essential part of our economic ecosystem. Our team has diverse backgrounds in engineering and science, so we wanted to choose a topic that has profound global implications. One of the grand challenges identified by the leaders of the U.N. and world bank is the shortage of food in our ever growing population. We thought it would be interesting for us to be able to build predictive forecasting of the stock price of this key commodity.</font></p>
+                    <br><br>
+                    <h4><font color="#F8F8F8">Video Walkthrough</h4>
+                    <br><br>
+
+                    <iframe width="720" height="480" src="https://www.youtube.com/embed/F4VoVLlyuS0" frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+    <!-- EDA grids section -->
+    <section id="EDA" style="background-color: #7F7F7F">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style = "color: #E0E0E0">Exploratory Data Analysis</h2>
+                    <br><br>
+                     <p><font color="#F8F8F8">Before creating a predictive model for wheat price, we chose to perform exploratory data analysis (EDA) on some of the data features that we had collected. In general, EDA is a means of summarizing the main characteristics of datasets, often with visual methods. Click on each of the EDA modules below to view EDA for each feature.</font></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>Inflation</h3></center>
+                    
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+        
+                        <img src="http://www.wallstreetdaily.com/wp-content/uploads/2014/12/12-2-guard-against-inflation.jpg" class="img-responsive" alt="">
+                    </a>
+                    <br>
+                    <center><p>Global inflation rates affect agriculture prices.</p></center>
+                </div>
+                
+
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>Corn Price</h3></center>
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                  
+                        <img src="http://www.etftrends.com/wp-content/uploads/2012/09/xcorn-ETF.jpg.pagespeed.ic.SSmiAQuvgt.jpg" class="img-responsive" alt="" height="388">
+                        <br>
+                    </a>
+                    <center><p>Corn price is good indicator of wheat price.</p></center>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>Precipitation</h3></center>
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                   
+                        <img src="http://www.wdbj7.com/image/view/-/20801322/highRes/1/-/maxh/640/maxw/640/-/qae4oq/-/rainfall-png--1-.png" class="img-responsive" alt=""> 
+                        <br>
+                    </a>
+                    <center><p>Rainfall is a critical factor for wheat production.</p></center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>Temperature</h3></center>
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                       <img src="http://us.images.detik.com/content/2012/01/05/1148/suhu-global-DLM.jpg" class="img-responsive" alt="" height="388">
+                       <br>
+                    </a>
+                    <center><p>Temperature is an important climactic factor for wheat growth.</p></center>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>EDA 5</h3></center>
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        
+                        <img src="http://img.deusm.com/eetimes/2014/01/1320663/eda-playground-01.gif" class="img-responsive" alt="" height="388">
+                        <br>
+                    </a>
+              
+                    <center><p>Some desription.</p></center>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <center><h3>EDA 6</h3></center>
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+           
+                        <img src="http://img.deusm.com/eetimes/2014/01/1320663/eda-playground-01.gif" class="img-responsive" alt="" height="388">
+                        <br>
+                    </a>
+                    <center><p>Some description.</p></center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="features" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2><font color="#282828">Features Engineering</h2>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <br><br><h4><font color="#282828">We did some features engineering. </h4>
+                    <p><font color="#282828">asfnadgkjadhgahg asj g;kblah </p>
+                    <br><h4><font color="#282828">Some other feature engineering:</h4><p><font color="#282828">asfbadlgkjahghqag,ladhg,jlkadh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- Work Experience Section -->
+    <section id="model" style="background-color: #F0F0F5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Predictive Model</h2>
+                    <br><br>
+
+                    <p><font color="#7F7F7F">We wrote a predictive model!!!!!!!!!!!!</font></p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="results">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><font color="#E0E0E0">Results and Discussion</h2>
+                    <br>
+                    <p><font color="#FFFFFF">We wrote a predictive model!!!!!!!!!!!!</font></p>
+                </div>
+            </div> 
+        </div>
+    </section>
+        
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Contact Me</h2>
+                        <br>
+                        <p>Please contact me if you have any comments or inquiries!</p>
+                        <p>Email: <a href="mailto:danielwang01@college.harvard.edu" target="_blank">danielwang01@college.harvard.edu</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-below">
+               
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright © 2015 - Team Big Pandas
+                            <br>
+                            The code for this website is open source on <a href="https://github.com/dwang953/personal-website" target="_blank">GitHub</a>!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll visible-xs visble-sm">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+            
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $("#myModal").on('hide.bs.modal', function(){
+                $("#cartoonVideo").attr('src', '');
+            });
+            
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function(){
+                $("#cartoonVideo").attr('src', url);
+            });
+        });
+        </script>
+        
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Inflation EDA</h2>
+                                <br>
+
+
+
+                                <h3>Description</h3>
+                                <p>We did something. Also add an image or two. </p>
+                  
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Corn Price EDA</h2>
+                                <br>
+               
+                                
+                                <h3>Description</h3>
+                                <p>Blah blah</p>
+                            
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Precipitation EDA</h2>
+                                <br>
+                                <img src="https://raw.githubusercontent.com/dwang953/personal-website/gh-pages/img/portfolio/ducer_block.png" class="img-responsive img-centered" alt="">
+                                <h3>Description</h3>
+                                <p>bshfsaigasinuasmfklyuamh</p>
+
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Temperature EDA</h2>
+                                <br>
+                                <p>sfadkgjhajdgmhajkldhg,jdkgma,hgbsdklmg.,km</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>5 EDA</h2>
+                                <br>
+                                
+                                <h3>Description</h3>
+                                <p>Tsafadgdsdshshsfhsfhfshhsfhsh</p>
+                                
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>6 EDA</h2>
+                                <br>
+                                
+                                <h3>Description</h3>
+                                <p>Tsafadgdsdshshsfhsfhfshhsfhsh</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="js/main.js"></script>
+
+        <!-- jQuery Easing Plugin -->
+        <script src="js/jquery.easing.1.3.js"></script>
+
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="fancyBox/source/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/fancyBox.js"></script>
+        <link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen" />
+
+        <!-- Add mousewheel plugin -->
+        <script type="text/javascript" src="fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+        <!-- Add Thumbnail helper -->
+        <link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css" />
+        <script type="text/javascript" src="fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+    </body>
+
+    </html>
