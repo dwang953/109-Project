@@ -246,19 +246,17 @@
                     <img src="img/regressionwheatvscorn.JPG" style="float: center; width: 79%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
                     <br><br>
                     
-
-                    <img src="img/tempvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
-                    <img src="img/precipvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
-                    <img src="img/inflationvswheat.JPG" style="float: center; width: 51%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
-                    <br><br>
-                    
                     <img src="img/sorghumvswheat.JPG" style="float: center; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
                     <br><br>
                     <br><br>
                     <img src="img/sorghumvswheatregression.JPG" style="float: center; width: 79%; margin-right: 1%; margin-bottom: 0.5em;" height="200">
                     <br><br>
 
-                    
+                    <img src="img/tempvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <img src="img/precipvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <img src="img/inflationvswheat.JPG" style="float: center; width: 51%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <br><br>
+                                       
                 </div>
             </div>
         </div>
@@ -275,13 +273,16 @@
                     <h2>Predictive Model</h2>
                     <br><br>
 
-                    <p><font color="#7F7F7F"><p><font color="#282828">Based on the previous regression analysis, some features were eliminated while others were refined. Inflation data proved to have little correlation with that month's wheat prices, so it was not considered in the formation of our support vector machine (SVM) predictive model. Since corn and sorghum prices had such a strong positive correlation to wheat prices, those were included in the model.</p>
+                    <p align="left"><font color="#7F7F7F"><p><font color="#282828">
+                        <p align="left">Based on the previous regression analysis, some features were eliminated while others were refined. Inflation data proved to have little correlation with that month's wheat prices, so it was not considered in the formation of our support vector machine (SVM) predictive model. Since corn and sorghum prices had such a strong positive correlation to wheat prices, those were included in the model.For the climate data, our regression model suggests that these climate features may have a very small effect on wheat price. However, there are improvements to be made when we consider only a segment of the states. Since the regression analysis suggests slightly better correlations when only considering the top wheat producing states, the data is constricted to the top 10 wheat producing states in the predictive model.</p>
                     <br>
-                    <p><font color="#282828">For the climate data, our regression model suggests that these climate features may have a very small effect on wheat price. However, there are improvements to be made when we consider only a segment of the states. Since the regression analysis suggests slightly better correlations when only considering the top wheat producing states, the data is constricted to the top 10 wheat producing states in the predictive model.</p></font></p>
+                
 
-                    <h4><font color="#282828">Linear Regression Results</h4>                        
-                    <p>From our analysis including building linear regression models for each factor vs. the price wheat, we can see that the factors that most strongly correlate with wheat price are the corn and sorghum price.  Specifically, for these two factors we analyze further the regression statistics and see that corn and sorghum price have an R-squared correlation value of .792 and .832 respectively. Temperature and precipitation turned out to not have much correlation with the price of wheat. Specifically looking at drought, we also explored the relationship between the Palmer Drought Severity Index (standardized drought indicator) and the price of wheat. Though the regression faired slightly better than both temperature and precipitation, as we were able to see a slight positive correlation between drought and wheat price, it did not perform nearly as well as sorghum and wheat price.</p>
+                    <h4><font color="#282828">Initial SVM Model</h4>                        
+                    <p>  In our first attempt to predict price, we ran a linear SVM model with all of our features and we were only able to obtain accuracy values of less than 2%. (We did not include this data in our project as the model had sub-par predictive value) We conluded that our data probably lacked the specific resolution needed to predict a precise price. Hence we pivoted our predictive model to forecast the change, whether price would increase or decrease in a given month, in price in wheat instead (a metric we believe to also be very important to wheat economics). Seeing that sorghum and corn prices correlate so well with wheat, we fed in sorghum and corn price and change in price to the model (we created indicator variables for the change: 1 if % change was positive and 0 if negative).  We were able to achieve an accuracy on train and test data of .716 and .603. </p>
 
+                    <h4><font color="#282828">Optimized Feature Engineered SVM Model</h4>                 
+                    <p>  Seeing that these related crops had strong predictive power, we investigated features that tie these grain commodities together, specifically climactic factors such as temperature, precipitation, and drought data. Feeding all this data in our linear SVM, we were able to further improve our accuracy on train and test data to be _____ and _____. </p>
 
                 </div>
             </div>
