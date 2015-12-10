@@ -350,7 +350,7 @@
                                 <br>
                                 <img src="img/inflation_eda.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="325">
                                 <img src="img/inflation_eda2.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="325">
-                                <h3>Description</h3>
+ 								<br>
                                 <p>A quick plotting of the percent change in inflation compared to wheat prices shows unpromising results, as a correlation isn't clearly visible (left). Tryign to plot a linear regression on this set of data gives us the same results. The linear regression is so uncertain, as evidenced by the large uncertainties, that it doesn't seem like a clear indicator of wheat prices.</p>
                   
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -430,9 +430,12 @@
                                 <br>
                                 <img src="img/temp_all.JPG" height="325">
                                 <p>When looking at temperature, the first step was to compare the average monthly temperature of all the states with wheat price. The results are hardly encouraging, as there seems to be little to no correlation. This makes sense because many states don't even produce wheat, and the winter months when wheat has not been planted should also have no effect on wheat prices. Therefore, the comparisons were refined, which was done by only examining the top 5 wheat-producing states in the US.</p>
+                                <br><br>
                                 <img src="img/temp_top5_indiv.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
                                 <img src="img/temp_top5_average.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
-                                <p>Here, the correlations between temperature and wheat price continue to be discouraging. No clear correlation can be seen, as the data all tends to be evenly distributed along the bottom of the graph. Averaging the data for the 5 states (right) doesn't appear to make a huge difference. As a last step toward refining the data to compare, the data was constricted to the months of March through October, which marks the beginning and end of the wheat growing season.
+                                <br>
+                                <p>Here, the correlations between temperature and wheat price continue to be discouraging. No clear correlation can be seen, as the data all tends to be evenly distributed along the bottom of the graph. Averaging the data for the 5 states (right) doesn't appear to make a huge difference. As a last step toward refining the data to compare, the data was constricted to the months of March through October, which marks the beginning and end of the wheat growing season.</p>
+                                <br><br>
                                 <img src="img/temp_top5_mar_to_oct.JPG" height="300">
                                 <p>This further refined comparison provides no new results, suggesting that temperature does not have a large effect on wheat prices.</p>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
@@ -458,9 +461,12 @@
                                 <br>
                                 <img src="img/prec_all.JPG" height="325">
                                 <p>When looking at precipitation, the first step was to compare the averaged cumulative rainfall of all the states with wheat price. The results are suggest little to no correlation. However, this data considers many states that don't even produce wheat, and the winter months when wheat isn't being grown. To account for these factors, the data was then cut to only examine the data of the top 5 wheat-producing states in the US.</p>
+                                <br><br>
                                 <img src="img/prec_top5_indiv.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
                                 <img src="img/prec_top5_average.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
-                                <p>Here, the correlations between precipitation and wheat price still aren't very correlated. The data points tend to be clumped in the the bottom left corner of the graph (left). There are some fairly large outliers in this dataset, but a clear correlation can't be found, regardless. Averaging the data for the 5 states (right) doesn't have much impact either. As a last step toward refining the data to compare, the data was constricted to the months of March through October, which marks the beginning and end of the wheat growing season.
+                                <br><br>
+                                <p>Here, the correlations between precipitation and wheat price still aren't very correlated. The data points tend to be clumped in the the bottom left corner of the graph (left). There are some fairly large outliers in this dataset, but a clear correlation can't be found, regardless. Averaging the data for the 5 states (right) doesn't have much impact either. As a last step toward refining the data to compare, the data was constricted to the months of March through October, which marks the beginning and end of the wheat growing season.</p>
+                                <br><br>
                                 <img src="img/prec_top5_mar_to_oct.JPG" height="300">
                                 <p>This further refined comparison provides no new results, suggesting that precipitation does not have a large effect on wheat prices, much like temperature. However, looking at the very tops of all four of these graphs, there appears to be a slightly negative correlation, albeit a weak one. This very small correlation led to preciptation's inclusion in our later model.</p>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -486,8 +492,10 @@
                                 <br>
                                 <img src="img/pdsi_map.JPG" height="325">
                                 <p>The Palmer Drought Severity Index (PDSI) is a way to quantifiably describe drought conditions of a specific region. The index ranges from -4.0 to 4.0. In this index, -4.0 represents a very severe drought, 0 represents mild conditions, and a 4.0 represents abnormally wet conditions. The map above shows the PDSI by state in the year 2005, which was recorded to be a hard drought year for certain states such as Arkansas and Wyoming.</p>
+                                <br><br>
                                 <img src="img/pdsi_top5_indiv.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
                                 <img src="img/pdsi_top5_average.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                                <br><br>
                                 <p>The above graphs show the PDSI of the top 5 states versus the wheat price, individually (left) and averaged together (right). There is not a strong correlation between these two factors, and nowhere near the correlation between wheat and corn/sorghum. However, in general, as the PDSI increases, the likelihood of having extremely high wheat prices decreases as well. This indicates that there is possibly a small negative correlation. Although it isn't close to being linear, this small trend warranted more investigation by using it in the predictive model.</p>
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
