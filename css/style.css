@@ -196,7 +196,19 @@ section.contact {
     margin: 0 0 15px;
     font-family: 'Open Sans', sans-serif;
     color: #E0E0E0 ; 
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
 }
+
+#portfolio .portfolio-item:hover {
+    opacity: 1;
+
+}
+
 
 #portfolio .portfolio-item .portfolio-link {
     display: block;
