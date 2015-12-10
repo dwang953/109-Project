@@ -53,10 +53,10 @@
                         <a href="#EDA">EDA</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#features">Features Engineering</a>
+                        <a href="#features">Linear Regression Models</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#model">Predictive Model</a>
+                        <a href="#model">Support Vector Machine Model</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#results">Results/Discussion</a>
@@ -225,20 +225,35 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Regression Section -->
     <section class="skills" id="features" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2><font color="#282828">Features Engineering</h2>
+                <h2><font color="#282828">Linear Regression Modeling</h2>
                 <br>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <br><br><h4><font color="#282828">We did some features engineering. </h4>
-                    <p><font color="#282828">asfnadgkjadhgahg asj g;kblah </p>
-                    <br><h4><font color="#282828">Some other feature engineering:</h4><p><font color="#282828">asfbadlgkjahghqag,ladhg,jlkadh</p>
+                <br><br><h4><font color="#282828">We performed a linear regression model on key features to determine which features turn out to the most powerful predictors of wheat price. </h4>
+                    <p><font color="#282828"> From the regression models produced below you can see that the strongest predictor of wheat price is corn and sorghum price (both grain commidities with similar growth and harvest cycles). Below we also calculate many regression statistics and see a fairly strong R^2 value of .792 and .832 for corn and sorghum, respectively. </p>
+                    <br><br>
+                    <img src="img/wheatvscorn.JPG" style="float: center; width: 49%; margin-right: 10%; margin-bottom: 0.5em;" height="300">
+                    <img src="img/regressionwheatvscorn.JPG" style="float: center; width: 79%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <br><br>
+                    
+
+                    <img src="img/tempvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <img src="img/precipvswheat.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <img src="img/inflationvswheat.JPG" style="float: center; width: 51%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <br><br>
+                    
+                    <img src="img/sorghumvswheat.JPG" style="float: center; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="300">
+                    <br><br>
+                    <br><br>
+                    <img src="img/sorghumvswheatregression.JPG" style="float: center; width: 79%; margin-right: 1%; margin-bottom: 0.5em;" height="200">
+                                <br><br>
                 </div>
             </div>
         </div>
@@ -271,7 +286,26 @@
                 <div class="col-lg-12 text-center">
                     <h2><font color="#E0E0E0">Results and Discussion</h2>
                     <br>
-                    <p><font color="#FFFFFF">We wrote a predictive model!!!!!!!!!!!!</font></p>
+                    <p><font color="#FFFFFF">
+
+                    <h4><font color="#E0E0E0">Linear Regression Results</h4>                        
+                    <p>From our analysis including building linear regression models for each factor vs. the price wheat, we can see that the factors that most strongly correlate with wheat price are the corn and sorghum price.  Specifically, for these two factors we analyze further the regression statistics and see that corn and sorghum price have an R-squared correlation value of .792 and .832 respectively. Temperature and precipitation turned out to not have much correlation with the price of wheat. Specifically looking at drought, we also explored the relationship between the Palmer Drought Severity Index (standardized drought indicator) and the price of wheat. Though the regression faired slightly better than both temperature and precipitation, as we were able to see a slight positive correlation between drought and wheat price, it did not perform nearly as well as sorghum and wheat price.</p>
+                     
+                    <p>Seeing that sorghum and corn has such a high correlation with wheat price, we were interested to see whether this was simply due to the fact that sorghum, corn, and wheat were all grains and therefore were affected by many similar economic and climactic factors or was it a general trait among commodities over time. To investigate this aim, we picked another agricultural commodity, cotton, that had lesser similarities with wheat. We also investigate how inflation correlates with the wheat price. Performing a simple linear regression on wheat vs. cotton price, we see that there is very little correlation between the two. Inflation also has a very marginal correlation. From these findings, we reason that the correlation between agricultural prices are not simply due pure agricultural economics alone. Similar grains commodities that grow similarly exhibit much more significant correlation than unrelated crops.</p>
+
+                    <h4><font color="#E0E0E0">Support Vector Machine Results</h4> 
+                    <p>Understanding that perhaps there might be some predictive power in temperature, precipitation, and drought, we decided to process the data with a more sophisticated model this time—specifically a support vector machine (SVM) that takes into account all these factors along with corn and sorghum price. Running a linear SVM model to predict price, we were only able to obtain accuracy values of less than 2%. This is probably because inherently our data is not at the resolution where we can predict the nuanced fluctuation in prices which change by the hour. Most of our data is quantified by the month. Knowing this invariable limitation, we pivot our predictive model to forecast whether price will increase or decrease rather than giving a specific price. </p>
+
+                    <p>We first feed into our SVM model simply two factors the indicator variable for whether the percentage of price increases or decreases for corn and sorghum. From this initial SVM model we get accuracy on training and test data of .716 and .603, respectively. In effort to improve this model we added in temperature and precipitation data from the top 10 wheat producing states, inflation rate and the percentage of price change. From this new model we were able to improve the accuracy on the training and test data to .7388 and .7931, respectively.  </p>
+
+
+
+                    <h3><font color="#E0E0E0">Intepretation and Discussion</h3>
+                    <p>Overall from this data we conclude that perhaps many climactic factors may not cause extreme change to the growth and harvest behavior of the crop. Wheat growth in modern farm infrastructure is stable and advanced irrigation systems probably compensate for dry, low precipitation weather—allowing for survival even in severe times of drought. Hence price does not greatly fluctuate due to these factors. Corn and sorghum though both correlate much better with wheat price allowing us to realize that perhaps general economics of related crops is a bigger determinant of price. To look at this a step further, we also analyze the price of an unrelated crop, cotton, and found very little correlation between price of wheat and cotton. Allowing us to know that perhaps many general growth, climactic, and harvest behavior of related plants(although not very strongly) still do affect the price. In effort to reassess whether our previous climactic features have any predictive power, we establish a more sophisticated model using a linear SVM and found that in fact feeding in more data helps improve accuracy of prediction.  </p>
+
+                    <h3><font color="#E0E0E0">Future Work</h3>
+                    <p>In the future, we would like to continue feeding in more data of interrelated crops and more nuanced data about soil, air quality, and even fertilizers. Although the correlation may be slightly low, as we see with a more sophisticated model we are able to more accurately classify differences. We can also search for data that is at a more detailed resolution (perhaps using data that is by the day) and also explore using alternative statistical models. </p>
+                    </font></p>
                 </div>
             </div> 
         </div>
@@ -353,7 +387,7 @@
                                 <img src="img/inflation_eda.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="325">
                                 <img src="img/inflation_eda2.JPG" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em;" height="325">
  								<br>
-                                <p>A quick plotting of the percent change in inflation compared to wheat prices shows unpromising results, as a correlation isn't clearly visible (left). Tryign to plot a linear regression on this set of data gives us the same results. The linear regression is so uncertain, as evidenced by the large uncertainties, that it doesn't seem like a clear indicator of wheat prices.</p>
+                                <p>A quick plotting of the percent change in inflation compared to wheat prices shows unpromising results, as a correlation isn't clearly visible (left). Trying to plot a linear regression on this set of data gives us the same results. The linear regression is so uncertain, as evidenced by the large uncertainties, that it doesn't seem like a clear indicator of wheat prices.</p>
                   
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
