@@ -224,7 +224,7 @@ section.contact {
     transition:all 0.45s ease-in-out;
 }
 
-#portfolio .portfolio-item:hover {
+#portfolio .portfolio-item .portfolio-link:hover {
     opacity: 1;
 
 }
