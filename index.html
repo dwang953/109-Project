@@ -253,12 +253,9 @@
                     <br><br>
                     <br><br>
                     <img src="img/sorghumvswheatregression.JPG" style="float: center; width: 79%; margin-right: 1%; margin-bottom: 0.5em;" height="200">
-                                <br><br>
-=======
-                <br><br>
-                    <p><font color="#282828">Based on the previous EDA, some features were eliminated while others were refined. Inflation data proved to have little correlation with that month's wheat prices, so it was not considered in the formation of a predictive model. Since corn and sorghum prices had such a strong positive correlation to wheat prices, those were included in the model.</p>
-                    <br>
-                    <p><font color="#282828">For the climate data, the EDA suggests that these climate features may have a very small effect on wheat price, although they don't correlate nearly as well as the prices of the substitute crops do. Since the EDA suggests slightly better correlations when only ocnsidering the top weat producing states, the data is constricted to the top 10 wheat producing states in the predictive model.</p>
+                    <br><br>
+
+                    
                 </div>
             </div>
         </div>
@@ -267,7 +264,7 @@
 
 
     
-    <!-- Work Experience Section -->
+    <!-- Predictive Linear SVM -->
     <section id="model" style="background-color: #F0F0F5">
         <div class="container">
             <div class="row">
@@ -275,7 +272,14 @@
                     <h2>Predictive Model</h2>
                     <br><br>
 
-                    <p><font color="#7F7F7F">First, we created linear regression models that compared wheat price to various features. The ones </font></p>
+                    <p><font color="#7F7F7F"><p><font color="#282828">Based on the previous regression analysis, some features were eliminated while others were refined. Inflation data proved to have little correlation with that month's wheat prices, so it was not considered in the formation of our support vector machine (SVM) predictive model. Since corn and sorghum prices had such a strong positive correlation to wheat prices, those were included in the model.</p>
+                    <br>
+                    <p><font color="#282828">For the climate data, our regression model suggests that these climate features may have a very small effect on wheat price. However, there are improvements to be made when we consider only a segment of the states. Since the regression analysis suggests slightly better correlations when only considering the top wheat producing states, the data is constricted to the top 10 wheat producing states in the predictive model.</p></font></p>
+
+                    <h4><font color="#282828">Linear Regression Results</h4>                        
+                    <p>From our analysis including building linear regression models for each factor vs. the price wheat, we can see that the factors that most strongly correlate with wheat price are the corn and sorghum price.  Specifically, for these two factors we analyze further the regression statistics and see that corn and sorghum price have an R-squared correlation value of .792 and .832 respectively. Temperature and precipitation turned out to not have much correlation with the price of wheat. Specifically looking at drought, we also explored the relationship between the Palmer Drought Severity Index (standardized drought indicator) and the price of wheat. Though the regression faired slightly better than both temperature and precipitation, as we were able to see a slight positive correlation between drought and wheat price, it did not perform nearly as well as sorghum and wheat price.</p>
+
+
                 </div>
             </div>
 
