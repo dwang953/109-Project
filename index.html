@@ -59,7 +59,10 @@
                         <a href="#model">SVM Model</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#results">Results/Discussion</a>
+                        <a href="#results">Results</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#discussion">Discussion</a>
                     </li>
                     
                 </ul>
@@ -289,7 +292,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2><font color="#FFFFFF">Results and Discussion</h2>
+                    <h2><font color="#FFFFFF">Results</h2>
                     <br>
 
                     <h3 align="left"><font color="#FFFFFF ">Linear Regression Results</h4>                        
@@ -304,15 +307,27 @@
 
                     <p align="left">We first feed into our SVM model simply two factors the indicator variable for whether the percentage of price increases or decreases for corn and sorghum. From this initial SVM model we get accuracy on training and test data of .716 and .603, respectively. In effort to improve this model we added in temperature and precipitation data from the top 10 wheat producing states, inflation rate and the percentage of price change. From this new model we were able to improve the accuracy on the training and test data to .7388 and .7931, respectively.  </p>
 
+                </div>
+            </div> 
+        </div>
+    </section>
+
+      <!-- About Section -->
+    <section style="background-color: #F0F0F5" id="discussion">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Discussion</h2>
+                    <br>                     
+                   
+
+                    <h3 align="left"><font color="#7F7F7F">Intepretation and Discussion</h3>
+                    <p align="left" font color="#7F7F7F">Overall from this data we conclude that perhaps many climactic factors may not cause extreme change to the growth and harvest behavior of the crop. Wheat growth in modern farm infrastructure is stable and advanced irrigation systems probably compensate for dry, low precipitation weather—allowing for survival even in severe times of drought. Hence price does not greatly fluctuate due to these factors. Corn and sorghum though both correlate much better with wheat price allowing us to realize that perhaps general economics of related crops is a bigger determinant of price. To look at this a step further, we also analyze the price of an unrelated crop, cotton, and found very little correlation between price of wheat and cotton. Allowing us to know that perhaps many general growth, climactic, and harvest behavior of related plants(although not very strongly) still do affect the price. In effort to reassess whether our previous climactic features have any predictive power, we establish a more sophisticated model using a linear SVM and found that in fact feeding in more data helps improve accuracy of prediction.  </p>
+
                     <br><br>
 
-                    <h3 align="left"><font color="#FFFFFF ">Intepretation and Discussion</h3>
-                    <p align="left">Overall from this data we conclude that perhaps many climactic factors may not cause extreme change to the growth and harvest behavior of the crop. Wheat growth in modern farm infrastructure is stable and advanced irrigation systems probably compensate for dry, low precipitation weather—allowing for survival even in severe times of drought. Hence price does not greatly fluctuate due to these factors. Corn and sorghum though both correlate much better with wheat price allowing us to realize that perhaps general economics of related crops is a bigger determinant of price. To look at this a step further, we also analyze the price of an unrelated crop, cotton, and found very little correlation between price of wheat and cotton. Allowing us to know that perhaps many general growth, climactic, and harvest behavior of related plants(although not very strongly) still do affect the price. In effort to reassess whether our previous climactic features have any predictive power, we establish a more sophisticated model using a linear SVM and found that in fact feeding in more data helps improve accuracy of prediction.  </p>
-
-                    <br><br>
-
-                    <h3 align="left"><font color="#FFFFFF ">Future Work</h3>
-                    <p align="left">In the future, we would like to continue feeding in more data of interrelated crops and more nuanced data about soil, air quality, and even fertilizers. Although the correlation may be slightly low, as we see with a more sophisticated model we are able to more accurately classify differences. We can also search for data that is at a more detailed resolution (perhaps using data that is by the day) and also explore using alternative statistical models. </p>
+                    <h3 align="left"><font color="#7F7F7F">Future Work</h3>
+                    <p align="left" font color="#7F7F7F">In the future, we would like to continue feeding in more data of interrelated crops and more nuanced data about soil, air quality, and even fertilizers. Although the correlation may be slightly low, as we see with a more sophisticated model we are able to more accurately classify differences. We can also search for data that is at a more detailed resolution (perhaps using data that is by the day) and also explore using alternative statistical models. </p>
                     </font></p>
                 </div>
             </div> 
