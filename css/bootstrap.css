@@ -50,6 +50,8 @@ a:active,
 a:hover {
   outline: 0;
 }
+
+
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -935,17 +937,28 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
-.darken img {
-  -webkit-filter: brightness(0%);
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
+
+.darken {
+    display: inline-block;
+    background: black;
+    padding: 0;
 }
+
+
+.darken img {
+    display: block;
+    
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+
  
-.darken img:hover {
-  -webkit-filter: brightness(-65%);
+.darken:hover img {
+    opacity: 0.7;
+            
 },
 .thumbnail > img,
 .thumbnail a > img,
