@@ -297,13 +297,14 @@
 
                     <h3 align="left"><font color="#FFFFFF ">Linear Regression Results</h4>                        
                     <p align="left">From our analysis including building linear regression models for each factor vs. the price wheat, we can see that the factors that most strongly correlate with wheat price are the corn and sorghum price.  Specifically, for these two factors we analyze further the regression statistics and see that corn and sorghum price have an R-squared correlation value of .792 and .832 respectively. Temperature and precipitation turned out to not have much correlation with the price of wheat. Specifically looking at drought, we also explored the relationship between the Palmer Drought Severity Index (standardized drought indicator) and the price of wheat. Though the regression faired slightly better than both temperature and precipitation, as we were able to see a slight positive correlation between drought and wheat price, it did not perform nearly as well as sorghum and wheat price.</p>
-                     
+                    <br>
                     <p align="left">Seeing that sorghum and corn has such a high correlation with wheat price, we were interested to see whether this was simply due to the fact that sorghum, corn, and wheat were all grains and therefore were affected by many similar economic and climactic factors or was it a general trait among commodities over time. To investigate this aim, we picked another agricultural commodity, cotton, that had lesser similarities with wheat. We also investigate how inflation correlates with the wheat price. Performing a simple linear regression on wheat vs. cotton price, we see that there is very little correlation between the two. Inflation also has a very marginal correlation. From these findings, we reason that the correlation between agricultural prices are not simply due pure agricultural economics alone. Similar grains commodities that grow similarly exhibit much more significant correlation than unrelated crops.</p>
 
                     <br><br>
 
                     <h3 align="left"><font color="#FFFFFF ">Support Vector Machine Results</h4> 
                     <p align="left">Understanding that perhaps there might be some predictive power in temperature, precipitation, and drought, we decided to process the data with a more sophisticated model this time—specifically a support vector machine (SVM) that takes into account all these factors along with corn and sorghum price. Running a linear SVM model to predict price, we were only able to obtain accuracy values of less than 2%. This is probably because inherently our data is not at the resolution where we can predict the nuanced fluctuation in prices which change by the hour. Most of our data is quantified by the month. Knowing this invariable limitation, we pivot our predictive model to forecast whether price will increase or decrease rather than giving a specific price. </p>
+                    <br>
 
                     <p align="left">We first feed into our SVM model simply two factors the indicator variable for whether the percentage of price increases or decreases for corn and sorghum. From this initial SVM model we get accuracy on training and test data of .716 and .603, respectively. In effort to improve this model we added in temperature and precipitation data from the top 10 wheat producing states, inflation rate and the percentage of price change. From this new model we were able to improve the accuracy on the training and test data to .7388 and .7931, respectively.  </p>
 
@@ -317,7 +318,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Discussion</h2>
+                    <h2><font color="#7F7F7F">Discussion</h2>
                     <br>                     
                    
 
