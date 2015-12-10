@@ -222,6 +222,10 @@ section.contact {
     opacity: 1;
 }
 
+#portfolio .portfolio-item .portfolio-link .caption img:hover {
+    opacity: 1;
+}
+
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
     top: 50%;
