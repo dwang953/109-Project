@@ -5559,6 +5559,12 @@ button.close {
   position: relative;
   padding: 15px;
 }
+
+.modal-body p {
+  position: relative;
+  padding: 15px;
+  color:#404040;
+}
 .modal-footer {
   padding: 15px;
   text-align: right;
