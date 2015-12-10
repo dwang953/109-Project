@@ -318,7 +318,7 @@
         </div>
     </section>
 
-      <!-- About Section -->
+       <!-- About Section -->
     <section style="background-color: #F0F0F5" id="discussion">
         <div class="container">
             <div class="row">
@@ -327,18 +327,23 @@
                     <br>                     
                    
 
-                    <h3 align="left"><font color="#7F7F7F">Intepretation and Discussion</h3>
-                    <p align="left" font color="#7F7F7F">Overall from this data we conclude that perhaps many climactic factors may not cause extreme change to the growth and harvest behavior of the crop. Wheat growth in modern farm infrastructure is stable and advanced irrigation systems probably compensate for dry, low precipitation weather—allowing for survival even in severe times of drought. Hence price does not greatly fluctuate due to these factors. Corn and sorghum though both correlate much better with wheat price allowing us to realize that perhaps general economics of related crops is a bigger determinant of price. To look at this a step further, we also analyze the price of an unrelated crop, cotton, and found very little correlation between price of wheat and cotton. Allowing us to know that perhaps many general growth, climactic, and harvest behavior of related plants(although not very strongly) still do affect the price. In effort to reassess whether our previous climactic features have any predictive power, we establish a more sophisticated model using a linear SVM and found that in fact feeding in more data helps improve accuracy of prediction.  </p>
+                    <h3 align="left"><font color="#7F7F7F">Interpretation and Discussion</h3>
+                    <p align="left" font color="#7F7F7F">Overall, our data analysis and predictive models reveal a handful of interesting discoveries about wheat crop production and pricing in the United States. Most notably, we conclude that many climactic factors may not cause extreme change to the growth and harvest behavior of wheat. We did not see a strong dependency between wheat prices and temperature or precipitation, both at annual and monthly resolutions. Furthermore, even when we attemped to introduce time lags to account for crop growth, harvest, and transport time, we failed to find a strong correlation with environmental factors. This conslusion, supported by nearly all of our analysis methods, suggests that wheat growth in modern farm infrastructures is stable, perhaps as a result of advanced irrigation systems that allow for proper crop hydration even during the most severe periods of drought. Hence wheat price does not greatly fluctuate due to these factors. This may also suggest that wheat is overproduced in the United States, and that crop reserves may be utilized to offset the effects of non-ideal climactic conditions. 
+                    <br>
+                    On the other hand, corn and sorghum both exhibit a much higher degree of correlation with wheat price, prompting our team to believe that the general economics of agriculture is a more significant determining factor for wheat price. We selected these two crops for their similarities in growth conditions and applications to wheat. The high correlation between sorghum, wheat, and corn prices may be explained by the fact that they are recognized as substitute goods - low supply and high demand for one crop will cause a subsequent rise in price for the other two crops as well. This would explain why we see such a high degree of correlation between these three crops. 
+                    <br>
+                    To look into this correlation further, we also analyzed the price of cotton, a crop very different from wheat in terms of growth conditions and applications. In this case, we found very little correlation between price of wheat and cotton. This result suggests that there is some factor - perhaps climactic or economic - that affects the production and price of wheat and cotton very differently. Perhaps this suggests that climactic factors still do play a role in pricing. In an effort to reassess whether our previous climactic features have any predictive power, we establish a more sophisticated model using a linear SVM and found that in fact feeding in more data (including climactic data) helps improve accuracy of prediction.  </p>
 
                     <br><br>
 
                     <h3 align="left"><font color="#7F7F7F">Future Work</h3>
-                    <p align="left" font color="#7F7F7F">In the future, we would like to continue feeding in more data of interrelated crops and more nuanced data about soil, air quality, and even fertilizers. Although the correlation may be slightly low, as we see with a more sophisticated model we are able to more accurately classify differences. We can also search for data that is at a more detailed resolution (perhaps using data that is by the day) and also explore using alternative statistical models. </p>
+                    <p align="left" font color="#7F7F7F">In the future, we would like to continue feeding in more data of interrelated crops and more nuanced data about soil, air quality, and even fertilizers. Although the correlation may be relatively low, we have shown that feeding more datasets into more sophisticated models results in improvements in classiication accuracy. We can also search for data at a higher resolutions (perhaps by week or day) to further research the time lag involved in crop growth, harvest, and pricing. The ability to better predict this offset would be very insightful towards harvesting in itself. We could also explore using alternative statistical models to increase our accuracy scores.</p>
                     </font></p>
                 </div>
             </div> 
         </div>
     </section>
+        
         
 
         <!-- Contact Section -->
