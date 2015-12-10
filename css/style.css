@@ -46,6 +46,23 @@ h6 {
     margin: 0 auto;
 }
 
+.img-responsive {
+    display: inline-block;
+    background: black;
+    padding: 0;
+    opacity:1;
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+ 
+.img-responsive:hover {
+    opacity: 0.5;
+            
+}
+
 header {
     text-align: center;
     color: #ffffff;
