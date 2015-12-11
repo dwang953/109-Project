@@ -50,7 +50,7 @@ h6 {
     display: inline-block;
     background: black;
     padding: 0;
-    opacity:1;
+    opacity:0.3;
     -webkit-transition: all 0.5s linear;
        -moz-transition: all 0.5s linear;
         -ms-transition: all 0.5s linear;
@@ -59,7 +59,7 @@ h6 {
 }
  
 .img-responsive:hover {
-    opacity: 0.5;
+    opacity: 1;
             
 }
 
